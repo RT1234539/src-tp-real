@@ -334,7 +334,7 @@ function search_employees($dept_no, $name, $age_min, $age_max)
             INNER JOIN departments d
                     ON d.dept_no = de.dept_no
             WHERE $where
-            ORDER BY e.last_name, e.first_name
+            ORDER BY e.last_name DESC, e.first_name DESC
             LIMIT 200";
     return get_all_lines($sql);
 }
