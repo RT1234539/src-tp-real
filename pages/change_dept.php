@@ -40,7 +40,7 @@ $departments = get_departments_except($current ? $current['dept_no'] : '');
     <?php include './navbar/navbar.php' ?>
 
     <div class="container">
-        <p><a href="fiche.php?emp_no=<?= urlencode($emp_no) ?>" class="btn">&larr; Retour à la fiche</a></p>
+        <a href="fiche.php?emp_no=<?= urlencode($emp_no) ?>" class="btn">&larr; Retour à la fiche</a>
         <?php if (!$employee) { ?>
             <h1>Employé introuvable</h1>
         <?php } else { ?>
