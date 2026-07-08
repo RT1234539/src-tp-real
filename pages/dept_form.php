@@ -9,7 +9,7 @@ $error   = '';
 $success = false;
 // Valeurs affichées dans le formulaire
 $dept_no   = $dept_no_url;
-$dept_name = $editing ? $editing['dept_name'] : '';
+$dept_name = $editing['dept_name'] ?? '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $mode      = $_POST['mode'] ?? 'add';
