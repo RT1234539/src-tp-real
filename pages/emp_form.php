@@ -87,12 +87,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="card">
             <?php if ($success) { ?>
-                <p style="color:green;">Enregistré.
+                <p class="alert alert-success" style="color:green;">Enregistré.
                     <a href="fiche.php?emp_no=<?= urlencode($emp_no) ?>">Voir la fiche &rarr;</a>
                 </p>
             <?php } ?>
             <?php if ($error !== '') { ?>
-                <p style="color:red;"><?= htmlspecialchars($error) ?></p>
+                <p class="alert alert-error" style="color:red;"><?= htmlspecialchars($error) ?></p>
             <?php } ?>
 
             <form method="post" action="emp_form.php<?= $editing ? '?emp_no=' . urlencode($emp_no) : '' ?>">

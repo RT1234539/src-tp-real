@@ -52,7 +52,7 @@ $employees = get_employees_by_department($dept_no, $par_page, $offset);
                 <tbody>
                     <?php foreach ($employees as $line) { ?>
                         <tr>
-                            <td><?= $line['emp_no'] ?></td>
+                            <td><a href="fiche.php?emp_no=<?= $line['emp_no'] ?>"><?= $line['emp_no'] ?></a></td>
                             <td><?= $line['first_name'] ?></td>
                             <td><?= $line['last_name'] ?></td>
                             <td><?= $line['gender'] ?></td>

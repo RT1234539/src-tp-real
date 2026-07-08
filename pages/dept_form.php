@@ -48,10 +48,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="card">
             <?php if ($success) { ?>
-                <p style="color:green;">Enregistré.</p>
+                <p class="alert alert-success" style="color:green;">Enregistré.</p>
             <?php } ?>
             <?php if ($error !== '') { ?>
-                <p style="color:red;"><?= htmlspecialchars($error) ?></p>
+                <p class="alert alert-error" style="color:red;"><?= htmlspecialchars($error) ?></p>
             <?php } ?>
 
             <form method="post" action="dept_form.php<?= $editing ? '?dept_no=' . urlencode($dept_no) : '' ?>">
